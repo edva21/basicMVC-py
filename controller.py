@@ -59,3 +59,8 @@ class Controller(object):
             self.view.display_item_deletion(name)
         except mvc_exc.ItemNotStored as e:
             self.view.display_item_not_yet_stored_error(name, item_type, e)
+    def show_custom_message(message):
+        try:
+            self.view.display_custom_message(message)
+        except mvc_exc.ItemNotStored as e:
+            self.view.display_item_not_yet_stored_error(message, message, e)
